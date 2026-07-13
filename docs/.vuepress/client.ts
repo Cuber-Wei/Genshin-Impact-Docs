@@ -1,3 +1,6 @@
+import { h } from 'vue'
+import { Layout } from 'vuepress-theme-plume/client'
+import PageContextMenu from 'vuepress-theme-plume/features/PageContextMenu.vue'
 import { defineClientConfig } from 'vuepress/client'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
@@ -18,5 +21,11 @@ export default defineClientConfig({
 
     // your custom components
     // app.component('CustomComponent', CustomComponent)
+  },
+  layouts: {
+    Layout: h(Layout, null, {
+      // 将 PageContextMenu 添加到 doc-title-after 插槽，即文章标题的右侧
+      'doc-title-after': () => h(PageContextMenu),
+    }),
   },
 })
