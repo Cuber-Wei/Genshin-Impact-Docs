@@ -5,6 +5,7 @@ export default config({
   ignores: [
     '*.cache/*',
     '*.temp/*',
+    'sitescripts/*',
   ],
 }, {
   files: ['**/*.md/**/*.{ts,js,vue,jsx,tsx}'],
