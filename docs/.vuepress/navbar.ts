@@ -12,7 +12,11 @@ export default defineNavbarConfig([
   { text: '标签', link: '/blog/tags/' },
   { text: '归档', link: '/blog/archives/' },
   {
-    text: '笔记',
-    items: [{ text: '示例', link: '/demo/README.md' }],
+    text: '攻略',
+    items: [{ text: '角色攻略', link: '/characterGuide/README.md' }],
+  },
+  {
+    text: '站点导航',
+    items: [{ text: '原神数据库', link: 'https://gi.nanoka.cc/' }, { text: 'bilibili wiki', link: 'https://wiki.biligame.com/ys/' }, { text: '原神DPS数据库', link: 'https://www.mhydps.cn/' }],
   },
 ])

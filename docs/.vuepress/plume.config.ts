@@ -23,7 +23,7 @@ export default defineThemeConfig({
   appearance: true, // 配置 深色模式
 
   social: [
-    { icon: 'github', link: '/' },
+    { icon: 'github', link: 'https://github.com/Cuber-Wei/' },
   ],
   // navbarSocialInclude: ['github'], // 允许显示在导航栏的 social 社交链接
   // aside: true, // 页内侧边栏， 默认显示在右侧
@@ -35,8 +35,8 @@ export default defineThemeConfig({
    */
   // copyright: true,
 
-  // prevPage: true,   // 是否启用上一页链接
-  // nextPage: true,   // 是否启用下一页链接
+  prevPage: true, // 是否启用上一页链接
+  nextPage: true, // 是否启用下一页链接
   createTime: true, // 是否显示文章创建时间
 
   /* 站点页脚 */

@@ -114,7 +114,7 @@ $$
 
 $$
 \begin{aligned}
-    \text{直伤基础}&=0.96\times\text{属性}\times\text{倍率}\times(1+基础提升\%)\\
+    \text{直伤基础}&=1.6\times\text{属性}\times\text{倍率}\times(1+基础提升\%)\\
     & \times(1+\frac{6\times\text{元素精通}}{\text{元素精通}+2000}+\text{月结晶增伤}\%)\\
     \text{最终直伤}&=(\text{直伤基础}+\text{额外提升})\times\text{抗性系数}\times\text{暴击区}\times\text{擢升}
 \end{aligned}
@@ -128,7 +128,7 @@ $$
 
 $$
 \begin{aligned}
-    \text{反应月结晶}&=1446.85\times1.6\times(1+\text{基础提升}\%)\\
+    \text{反应月结晶}&=1446.85\times0.96\times(1+\text{基础提升}\%)\\
     &\times(1+\frac{6\times\text{元素精通}}{\text{元素精通}+2000}+\text{月结晶增伤}\%)\\
     &\times抗性系数\times暴击区\times擢升\\
     最终伤害&=伤害最高角色\times0.6+第二高角色\times0.3\\
