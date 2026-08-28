@@ -51,6 +51,10 @@ config:
           link: /blog/
         -
           theme: alt
-          text: Github →
-          link: https://github.com/Cuber-Wei/Genshin-Impact-Docs/
+          text: 原神公式 →
+          link: /blog/algorithm/
+        # -
+        #   theme: alt
+        #   text: Github →
+        #   link: https://github.com/Cuber-Wei/Genshin-Impact-Docs/
 ---
