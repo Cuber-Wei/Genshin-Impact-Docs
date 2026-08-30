@@ -1,42 +1,51 @@
-# genshin-impact-docs
+# Genshin Impact Docs
 
-网站使用 [vuepress](https://vuepress.vuejs.org/) 和 [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume) 构建生成。
+这是一个基于 [VuePress](https://vuepress.vuejs.org/) 和 [vuepress-theme-plume](https://theme-plume.vuejs.press/) 构建的原神知识站，聚焦于原神角色养成、数值分析、攻略笔记与公开文档展示。
 
-## Install
+## 项目主要功能
+
+- 文章/博客内容：收录原神相关的数值分析、收益计算、机制推导等专题文章。
+- 公式与算法说明：适合展示双暴配比、精通收益、伤害计算等解析内容。
+
+## 站点结构
+
+- `docs/blog/`：博客与分析文章
+- `docs/characterGuide/`：角色养成系列
+- `docs/.vuepress/`：站点配置、主题和静态资源
+
+## 本地开发
 
 ```sh
+# 安装依赖
 pnpm i
-```
 
-## Usage
-
-```sh
-# 启动开发服务
+# 启动开发服务器
 pnpm docs:dev
+
 # 构建生产包
 pnpm docs:build
-# 本地预览生产服务
+
+# 本地预览构建产物
 pnpm docs:preview
-# 更新 vuepress 和主题
+
+# 更新 VuePress 与主题
 pnpm vp-update
+
+# 项目代码格式化
+pnpm lint
 ```
 
 ## 部署到 GitHub Pages
 
-主题已创建 github actions: `.github/workflows/docs-deploy.yml`，你还需要在 github 仓库中进行以下设置：
+项目已配置 GitHub Actions：`.github/workflows/docs-deploy.yml`。如需发布到 GitHub Pages，需在仓库中完成以下设置：
 
-- [ ] `settings > Actions > General`，拉到页面底部，在 `Workflow permissions` 下，勾选 `Read and write permissions`，并点击保存按钮
+- `Settings > Actions > General`：开启 `Workflow permissions` 下的 `Read and write permissions`
+- `Settings > Pages`：将 `Source` 设为 `Deploy from a branch`，并选择 `gh-pages` 分支
+- 如需部署到 `https://<USERNAME>.github.io/<REPO>/`，请在 `docs/.vuepress/config.ts` 中设置 `base` 为 `"/<REPO>/"`
 
-- [ ] `settings > Pages`, 在 `Build and deployment` 中，`Source` 选择 `Deploy from a branch`, `Branch` 选择 `gh-pages`，并点击保存按钮
-  (首次创建可能没有 `gh-pages`分支，你可以先完成上面的设置后，推送一次代码到主分支，等待 `github actions` 完成后再进行设置)
+更多说明可参考 [GitHub Pages 文档](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)。
 
-- [ ] 修改 `docs/.vuepress/config.ts` 中的 `base` 选项：
-  - 如果你准备发布到 `https://<USERNAME>.github.io/` ，你可以省略这一步，因为 `base` 默认就是 `"/"` 。
-  - 如果你准备发布到 `https://<USERNAME>.github.io/<REPO>/` ，也就是说你的仓库地址是 `https://github.com/<USERNAME>/<REPO>` ，则将 `base` 设置为 `"/<REPO>/"`。
+## 相关文档
 
-如需要自定义域名，请查看 [Github Pages 文档](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
-
-## 文档
-
-- [vuepress](https://vuepress.vuejs.org/)
+- [VuePress](https://vuepress.vuejs.org/)
 - [vuepress-theme-plume](https://theme-plume.vuejs.press/)

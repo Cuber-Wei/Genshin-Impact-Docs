@@ -1,42 +1,51 @@
-# genshin-impact-docs
+# Genshin Impact Docs
 
-The Site is generated using [vuepress](https://vuepress.vuejs.org/) and [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
+This project is a Genshin Impact knowledge site built with [VuePress](https://vuepress.vuejs.org/) and [vuepress-theme-plume](https://theme-plume.vuejs.press/). It focuses on character progression guides, mechanics analysis, and general documentation for players.
 
-## Install
+## Main features
+
+- Blog and analysis articles: includes detailed notes on combat mechanics, calculations, and gameplay theory.
+- Formula and algorithm explanations: covers topics such as crit ratio, elemental mastery efficiency, and other numerical derivations.
+
+## Project structure
+
+- `docs/blog/`: blog posts and analysis articles
+- `docs/characterGuide/`: character growth and guide series
+- `docs/.vuepress/`: site configuration, theme, and static assets
+
+## Local development
 
 ```sh
+# install dependencies
 pnpm i
-```
 
-## Usage
-
-```sh
-# start dev server
+# start the dev server
 pnpm docs:dev
-# build for production
+
+# build production output
 pnpm docs:build
-# preview production build in local
+
+# preview the generated site locally
 pnpm docs:preview
-# update vuepress and theme
+
+# update VuePress and the theme
 pnpm vp-update
+
+# project code format
+pnpm lint
 ```
 
 ## Deploy to GitHub Pages
 
-The plume theme has been created with GitHub Actions: `.github/workflows/docs-deploy.yml`. You also need to make the following settings in the GitHub repository:
+The project already includes a GitHub Actions workflow at `.github/workflows/docs-deploy.yml`. To publish it through GitHub Pages, configure the repository as follows:
 
-- [ ] `settings > Actions > General`, Scroll to the bottom of the page, under `Workflow permissions`, check `Read and write permissions`, and click the save button.
+- `Settings > Actions > General`: enable `Read and write permissions` under `Workflow permissions`
+- `Settings > Pages`: set `Source` to `Deploy from a branch` and choose the `gh-pages` branch
+- If deploying to `https://<USERNAME>.github.io/<REPO>/`, set `base` to `"/<REPO>/"` in `docs/.vuepress/config.ts`
 
-- [ ] `settings > Pages`, In `Build and deployment`, select `Deploy from a branch` for `Source`, choose `gh-pages` for `Branch`, and click the save button.
-  (The `gh-pages` branch may not exist upon first creation. You can complete the above setup first, push the code to the main branch, wait for `github actions` to finish, and then proceed with the setup.)
+For custom domain setup, see the [GitHub Pages documentation](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages).
 
-- [ ] Modify the `base` option in `docs/.vuepress/config.ts`:
-  - If you are planning to deploy to `https://<USERNAME>.github.io/`, you can skip this step as `base` defaults to `"/"`.
-  - If you are planning to deploy to `https://<USERNAME>.github.io/<REPO>/`, meaning your repository URL is `https://github.com/<USERNAME>/<REPO>`, set `base` to `"/<REPO>/"`.
+## Related documentation
 
-To customize a domain name, please refer to [Github Pages](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
-
-## Documents
-
-- [vuepress](https://vuepress.vuejs.org/)
+- [VuePress](https://vuepress.vuejs.org/)
 - [vuepress-theme-plume](https://theme-plume.vuejs.press/)

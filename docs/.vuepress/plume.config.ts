@@ -18,7 +18,7 @@ import navbar from './navbar'
  * @see https://theme-plume.vuejs.press/config/theme/
  */
 export default defineThemeConfig({
-  logo: 'https://theme-plume.vuejs.press/plume.png',
+  logo: '/paimon.png',
 
   appearance: true, // 配置 深色模式
 
@@ -49,7 +49,7 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/theme/#profile
    */
   profile: {
-    avatar: 'https://theme-plume.vuejs.press/plume.png',
+    avatar: '/paimon.png',
     name: 'Genshin Impact Docs',
     description: '原神攻略文档站',
     circle: true,
